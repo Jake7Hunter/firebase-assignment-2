@@ -83,5 +83,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-//   addGallery();
+  addGallery();
 });
