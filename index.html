@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/gallery.js" defer></script>
+    <script src="./js/nav.js" defer></script>
+    <script src="./js/comments.js" defer></script>
+  
+</head>
+<body>
+    <nav id="noAuth">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./register.html">Register</a></li>
+            <li><a href="./login.html">Login</a></li>
+        </ul>
+    </nav>
+    <nav id="auth">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./register.html">Register</a></li>
+            <li><a href="./logout.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="banner">Gallery</h1>
+
+    <main class="gallery" id="gallery">
+
+    </main>
+    <div class="comments">
+        <h2>Comments</h2>
+        <ul id="commentList">
+
+        </ul>
+    </div>
+
+    <div class="extras">
+        <div class="uploadImage" id="uploadImage">
+            <h2>Upload your own image!</h2>
+            <input type="file" value="Upload" accept=".jpg" id="uploadFile">
+
+            <input type="text" id="imageName">
+        
+            <input type="submit" value="Submit" id="submitGallery">
+            <progress value="0" max="100" id="uploader">0%</progress>
+        </div>
+
+        <form class="addComments" id="addComments">
+            <h2>Add a comment!</h2>
+            Alias:
+            <input type="text" id="alias" />
+            Comment:
+            <input type="text" id="message"/>
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+
+  
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAIJJYMeY99CUf1nkJ3ls26XbrynOi7UXg",
+            authDomain: "assignment-2-c44d6.firebaseapp.com",
+            projectId: "assignment-2-c44d6",
+            storageBucket: "assignment-2-c44d6.appspot.com",
+            messagingSenderId: "342167222403",
+            appId: "1:342167222403:web:1f7a680aec6557fb3c83b6"
+            };
+
+            firebase.initializeApp(firebaseConfig);
+    </script>
+
+    
+</body>
+</html>

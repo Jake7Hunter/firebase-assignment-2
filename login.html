@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/login.js" defer></script>
+    <script src="./js/nav.js" defer></script>
+</head>
+<body>
+    <nav id="noAuth">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./register.html">Register</a></li>
+            <li><a href="./login.html">Login</a></li>
+        </ul>
+    </nav>
+    <nav id="auth">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./register.html">Register</a></li>
+            <li><a href="./logout.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="banner">Login</h1>
+
+    <div class="account">
+        E-Mail:
+        <input type="text" id="email">
+
+        Password
+        <input type="password" id="password">
+
+        <input type="submit" id="login" value="Login">
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAIJJYMeY99CUf1nkJ3ls26XbrynOi7UXg",
+            authDomain: "assignment-2-c44d6.firebaseapp.com",
+            projectId: "assignment-2-c44d6",
+            storageBucket: "assignment-2-c44d6.appspot.com",
+            messagingSenderId: "342167222403",
+            appId: "1:342167222403:web:1f7a680aec6557fb3c83b6"
+            };
+
+            firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>
